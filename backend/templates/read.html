@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read</title>
+</head>
+<body>
+    <table>
+        {%csrf_token%}
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Theatre</th>
+                <th>Movie</th>
+                <th>Audio</th>
+                <th>Type</th>
+                <th>Series</th>
+                <th>Seat_Number</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for data in obj%}
+            <tr>
+                <td>{{data.id}}</td>
+                <td>{{data.date}}</td>
+                <td>{{data.theatre}}</td>
+                <td>{{data.movie}}</td>
+                <td>{{data.audio}}</td>
+                <td>{{data.type}}</td>
+                <td>{{data.series}}</td>
+                <td>{{data.seat_number}}</td>
+                <td>{{data.price}}</td>
+                <td><button><a href="update/{{data.id}}">update</a></button></td>
+                <td><button><a href="delete/{{data.id}}">delete</a></button></td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</body>
+</html>

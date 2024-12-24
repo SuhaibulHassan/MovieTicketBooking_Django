@@ -1,0 +1,22 @@
+body{
+    background: #1f2025;
+}
+
+.payment{
+    display: flex;
+    justify-content: center;
+}
+
+.payment .payment_container .head{
+    display: grid;
+    grid-template-columns: 15% 23% 25% 15% 15% 18% 15%;
+    color: aliceblue;
+}
+
+.total{
+    margin-left: 40%;
+    margin-right: 35%;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+}

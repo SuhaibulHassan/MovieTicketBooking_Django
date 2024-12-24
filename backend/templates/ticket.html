@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/backstyle.css' %}">
+    <title>Create</title>
+</head>
+<body>
+    {% csrf_token %}
+    {{form}}
+    <h1 class="classname">dfg</h1>
+    <h1 class="classname">dhvbh</h1>
+    <div class="ticket" id="ticket">
+        <div class="tic">
+            <div class="barcode">
+                <div class="card">
+                    <h6>ROW S</h6>
+                    <h6>4 September 2023</h6>
+                </div>
+                <div class="card">
+                    <h6>Seat 18</h6>
+                    <h6>23:00</h6>
+                </div>
+                <svg id="S18barcode"></svg>
+                <h5>VEGUS CINEMA</h5>
+            </div>
+            <div class="tic_details">
+                <div class="type">4DX</div>
+                <h5 class="pvr"><span>Vegus</span>Cinema</h5>
+                <h1>JAWAN</h1>
+                <div class="seat_det">
+                    <div class="seat_card">
+                        <h6>ROW</h6>
+                        <h6 class="card_details">S<h6>
+                    </div>
+                    <div class="seat_card">
+                        <h6>SEAT</h6>
+                        <h6 class="card_details">20</h6>
+                    </div>
+                    <div class="seat_card">
+                        <h6>DATE</h6>
+                        <h6 class="card_details">4<sub>Sep</sub></h6>
+                    </div>
+                    <div class="seat_card">
+                        <h6>TIME</h6>
+                        <h6 class="card_details">11:30 <sub>pm</sub> </h6>
+                    </div>
+                    <div class="theatre_name">
+                        Sathyam
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" id='session_submit'>submit</button>
+        <script src="{% static 'js/backapp.js' %}"></script>
+    </div>
+    <!-- <script>
+        document.getElementById('session_submit').addEventListener('click',()=>{
+        let newform=document.querySelectorAll('#session_form1')
+        console.log(newform);
+        array2=new Array()
+        newform.forEach((form)=>{
+            let newformdata=new FormData(form)
+            console.log(newformdata);
+            
+            let values={}
+            for(const[key,value] of newformdata){
+                values[key]=value;
+            }
+            console.log(values);
+            array2.push(values)
+        })
+        console.log(array2);
+        
+        })
+    </script> -->
+</body>
+</html> 
